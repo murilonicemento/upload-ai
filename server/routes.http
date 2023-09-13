@@ -1,0 +1,41 @@
+# @name get-prompts
+
+GET http://localhost:3333/prompts
+
+###
+
+# @name upload
+
+POST http://localhost:3333/videos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="kaleo.mp3"
+Content-Type: audio/mpeg
+
+< ./kaleo.mp3
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+# @name create-transcription
+
+POST http://localhost:3333/videos/476d3001-db9e-4684-b95f-af5e1abe30f7/transcription
+Content-Type: application/json
+
+{
+  "prompt": "way down we go"
+}
+
+###
+
+# @name generate-ai-completion
+
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+  "videoId": "476d3001-db9e-4684-b95f-af5e1abe30f7",
+  "temperature": 0.5,
+  "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
+}
