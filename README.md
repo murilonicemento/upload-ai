@@ -8,7 +8,6 @@ Este é um projeto chamado "upload.ai" que utiliza inteligência artificial para
 
 - **Langchain**: Plataforma de processamento de linguagem natural para melhorar a precisão da transcrição.
 - **React**: Biblioteca JavaScript para a construção da interface do usuário.
-- **Next.js**: Framework React para desenvolvimento web.
 - **Node.js**: Ambiente de tempo de execução JavaScript para o servidor.
 - **OpenAI**: API de inteligência artificial para reconhecimento de fala e processamento de texto.
 - **Tailwind CSS**: Framework CSS para estilização rápida e responsiva.
