@@ -3,7 +3,7 @@ import { getFFmpeg } from "@/lib/ffmpeg";
 import { fetchFile } from "@ffmpeg/util";
 import { UploadIcon } from "@radix-ui/react-icons";
 import { FileVideo } from "lucide-react";
-import { useMemo, useRef, useState } from "react";
+import { ChangeEvent, useMemo, useRef, useState } from "react";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import { Separator } from "./ui/separator";
@@ -75,7 +75,7 @@ export function VideoInputForm(props: VideoInputFormProps) {
     return audioFile;
   }
 
-  async function handleUploadVideo(event: FormEventHandler<HTMLFormElement>) {
+  async function handleUploadVideo(event: { preventDefault: () => void }) {
     event.preventDefault();
 
     const prompt = promptInputRef.current?.value;
