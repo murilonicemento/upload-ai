@@ -20,7 +20,7 @@ Este é um projeto chamado "upload.ai" que utiliza inteligência artificial para
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/upload.ai.git
+git clone https://github.com/murilonicemento/upload.ai.git
 cd upload.ai
 ```
 
